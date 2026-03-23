@@ -13,9 +13,11 @@ df['progression'] = dataset.target
 df = df.drop(columns='sex')
 df.dropna()
 
-# find relationship between features and the target variable
+# determine what features to test
 f1 = ['age', 'bmi', 'bp', 's1', 's2', 's3', 's4', 's5', 's6'] # all possible features
 f2 = ['s1', 's2', 's3', 's4', 's5', 's6'] # only serum measurements
 f3 =  ['age', 's1', 's2', 's3', 's4', 's5', 's6'] # age and serum measurements
 f4 =  ['bmi', 's1', 's2', 's3', 's4', 's5', 's6'] # bmi and serum measurements
 f5 =  ['bp', 's1', 's2', 's3', 's4', 's5', 's6'] # bp and serum measurements
+
+# create method to test correlation between features and target
