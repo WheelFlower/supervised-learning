@@ -13,7 +13,7 @@ df['progression'] = dataset.target
 df = df.drop(columns='sex')
 df.dropna()
 
-# find relationship between the features and the target variable
+# find relationship between features and the target variable
 f1 = ['age', 'bmi', 'bp', 's1', 's2', 's3', 's4', 's5', 's6'] # all possible features
 f2 = ['s1', 's2', 's3', 's4', 's5', 's6'] # only serum measurements
 f3 =  ['age', 's1', 's2', 's3', 's4', 's5', 's6'] # age and serum measurements
