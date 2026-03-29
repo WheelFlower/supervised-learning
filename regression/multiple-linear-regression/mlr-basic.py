@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import pandas as pd
 import numpy as np
 from sklearn.datasets import load_diabetes
@@ -45,4 +46,6 @@ print("\nA model with everything but age:\n", get_mlr_model(f6).summary())
 print("\nA model with all possible features:'\n", get_mlr_model(f1).summary())
 
 # The best r-squared value is with all features
+=======
+>>>>>>> 604a87182c219d7c24e978bc86a49ad1d459b664
 
