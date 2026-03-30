@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import pandas as pd
 import numpy as np
 from sklearn.datasets import load_diabetes
@@ -46,6 +45,13 @@ print("\nA model with everything but age:\n", get_mlr_model(f6).summary())
 print("\nA model with all possible features:'\n", get_mlr_model(f1).summary())
 
 # The best r-squared value is with all features
-=======
->>>>>>> 604a87182c219d7c24e978bc86a49ad1d459b664
+model = get_mlr_model(f1)
 
+# function to predict progression from new input
+def predict_new_progression(x_vars):
+    arr = np.array([x_vars])
+    test_case_raw = pd.DataFrame(arr, columns=dfcols)
+    test_case = scaler.transform(test_case_raw)
+    test_case = pd.DataFrame(test_case, columns=dfcols)
+    test_case = sm.add_constant(test_case)
+    return model.predict(test_case)
