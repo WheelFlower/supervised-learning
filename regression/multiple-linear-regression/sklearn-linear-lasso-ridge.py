@@ -43,14 +43,14 @@ def display_accuracy(model):
 
 # show coefficients and accuracies for models
 print("Linear model coefficients:")
-display_coefficients(linear_model)
+display_coefficients(mlr_model)
 print("\nRidge model coefficients:")
 display_coefficients(ridge_model)
 print("\nLasso model coefficients:")
 display_coefficients(lasso_model)
 
 print("\n\nLinear model accuracy:")
-display_accuracy(linear_model)
+display_accuracy(mlr_model)
 print("\nRidge model accuracy:")
 display_accuracy(ridge_model)
 print("\nLasso model accuracy:")
