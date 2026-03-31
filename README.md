@@ -13,13 +13,20 @@ In machine learning, regression models aim to find the best fitting line or curv
 Linear regression is the simplest form of regression where the model maps the relationship between one independent variable and the target variable. If graphed, this relationship would be represented with a straight line with the equation y = mx + b where y would be the target variable and x would be the independent variable. Within this repository, there are two linear regression models that use statsmodels and sklearn respectively to show the process involved in creating the same model using said libraries.
 Outside of the requirements for every model, the linear regression models also:
 - Justify the selection of features for the model by determining the relationship between the feature(s) and the target variable
-- Identify the equation created and used by the model to predict values. This includes the slope(s) and y-intercept. (Example: y = mx + b)
+- Identify the equation created and used by the model to predict values. This includes the slope and y-intercept (example: y = mx + b)
 ### Multiple linear regression
 Multiple linear regression requires the model to map the relationship between multiple independent varaibles and the target variable. 
 mlr-basic.py displays a multiple linear regression model achiveved through statsmodels. Outside of the requirements for every model in the repository, this model:
-- [fill later]
+- Uses the StandardScaler from sklearn to standardize the data
 There are two popular techniques for regularizing linear regression models: Ridge regression and Lasso regression. Both methods operate by applying a penalty term to restrain the model's coefficients, but they go about it in different ways. Ridge regression adds a penalty based on the squared magnitude of the coefficients while lasso regression adds a penalty based on the absolute values of the coefficients. Ridge regression tends to perform better for the purpose of addressing multicollinearity (when two independent variables are highly correlated) while Lasso regression better addresses the elimination of insignificant independent variables.
-To showcase the differences between a model using Ridge regression, Lasso regression, and multiple linear regression, sklearn-linear-lasso-ridge portrays each of these models when trained on the same training data. Using the sklearn library, each model displays the following:
--[fill in later]
+To showcase the differences between a model using Ridge regression, Lasso regression, and multiple linear regression, sklearn-linear-lasso-ridge portrays each of these models when trained on the same training data. Using the sklearn library, each model:
+- Uses a train-test split of 70%-30%
+- Feature data is scaled using sklearn's StandardScaler
+- Displays the coeffients of the features used
+- Displays the accuracy score of both test and training data to demonstrate the possibility of overfitting (conforming too closely to the training data)
 ## Classification Models
 In machine learning, classification models operate by learning class characteristics from training data and then using those learned characteristics to assign possible classes to new data. 
+The k-means file uses the sklearn KNeighborsClassifier model. As well as the requirements for all models in this repository, this model:
+- Uses a train-test split of 70%-30%
+- Feature data is standardized using sklearn's StandardScaler
+- Computes the accuracy scores for the various k-values the model could use and plots them to show which is highest
