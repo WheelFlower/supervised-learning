@@ -25,7 +25,7 @@ There are two popular techniques for regularizing linear regression models: Ridg
 
 To showcase the differences between a model using Ridge regression, Lasso regression, and multiple linear regression, sklearn-linear-lasso-ridge.py portrays each of these models when trained on the same training data. Using the sklearn library, each model:
 - Uses a train-test split of 70%-30%
-- Feature data is scaled using sklearn's StandardScaler
+- Uses feature data is scaled using sklearn's StandardScaler
 - Displays the coeffients of the features used
 - Displays the accuracy score of both test and training data to demonstrate the possibility of overfitting (conforming too closely to the training data)
 ## Classification Models
