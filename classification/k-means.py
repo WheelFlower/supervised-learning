@@ -4,6 +4,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.datasets import load_iris
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -49,6 +50,17 @@ k_value = k_values[index]
 # create model based on optimal k-value
 model = KNeighborsClassifier(n_neighbors=k_value)
 model.fit(X_train,y_train)
+
+# show accuracy score, classification report, and confusion matrix
+print('Accuracy Score:')
+y_predicts = model.predict(X_test)
+print(accuracy_score(y_test,y_predicts))
+
+print('Classification Report:')
+print(classification_report(y_test, y_predicts))
+
+print('Confusion Matrix:')
+print(confusion_matrix(y_test, y_predicts))
 
 # create method to predict new values
 def predict(arr, model):
