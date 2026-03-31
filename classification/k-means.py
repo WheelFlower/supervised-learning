@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.datasets import load_iris
 import seaborn as sns
-import matplotlib.py as plt
+import matplotlib.pyplot as plt
 
 # obtain dataset
 iris = load_iris()
@@ -38,9 +38,17 @@ for k in k_values:
 sns.lineplot(x=k_values,y=scores,marker='o')
 plt.xlabel('K-Values')
 plt.ylabel('Accuracy Scores')
+plt.savefig('k-values.png')
 plt.show()
 
+# get max k-value according to accuracy
+highest_accuracy = max(scores)
+index = scores.index(highest_accuracy)
+k_value = k_values[index]
+
 # create model based on optimal k-value
+model = KNeighborsClassifier(n_neighbors=k_value)
+model.fit(X_train,y_train)
 
 # create method to predict new values
 def predict(arr, model):
