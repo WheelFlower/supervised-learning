@@ -39,3 +39,19 @@ sns.lineplot(x=k_values,y=scores,marker='o')
 plt.xlabel('K-Values')
 plt.ylabel('Accuracy Scores')
 plt.show()
+
+# create model based on optimal k-value
+
+# create method to predict new values
+def predict(arr, model):
+  values = np.array([arr])
+  new_iris = pd.DataFrame(values, columns=X_raw.columns)
+  new_iris = scaler.transform(new_iris)
+  prediction = model.predict(new_iris)
+  if prediction == 0:
+    species = "setosa"
+  elif prediction == 1:
+    species = "versicolor"
+  else:
+    species = "virginica"
+  return species
