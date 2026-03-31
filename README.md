@@ -15,6 +15,8 @@ Linear regression is the simplest form of regression where the model maps the re
 Outside of the requirements for every model, the linear regression models also:
 - Justify the selection of features for the model by determining the relationship between the feature(s) and the target variable
 - Identify the equation created and used by the model to predict values. This includes the slope and y-intercept (example: y = mx + b)
+
+linear-reg-statsmodels.py shows a model trained on the entire raw dataset while linear-reg-sklearn.py details a process for standardizing and splitting the dataset into training and test data. The reason the different processes are shown is because there are situations in which they would be necessary or unnecessary. Some datasets have larger numeric ranges in the feature variables which would require the features to be scaled to ensure all features contribute proportionally to the model, in other datasets this would not be necessary. When it comes to train-test splitting, sometimes the dataset does not need to be split into training and test data if testing data has already been set aside beforehand in a separate file. 
 ### Multiple linear regression
 Multiple linear regression requires the model to map the relationship between multiple independent varaibles and the target variable. 
 
