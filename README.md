@@ -18,6 +18,7 @@ Outside of the requirements for every model, the linear regression models also:
 Multiple linear regression requires the model to map the relationship between multiple independent varaibles and the target variable. 
 mlr-basic.py displays a multiple linear regression model achiveved through statsmodels. Outside of the requirements for every model in the repository, this model:
 - Uses the StandardScaler from sklearn to standardize the data
+
 There are two popular techniques for regularizing linear regression models: Ridge regression and Lasso regression. Both methods operate by applying a penalty term to restrain the model's coefficients, but they go about it in different ways. Ridge regression adds a penalty based on the squared magnitude of the coefficients while lasso regression adds a penalty based on the absolute values of the coefficients. Ridge regression tends to perform better for the purpose of addressing multicollinearity (when two independent variables are highly correlated) while Lasso regression better addresses the elimination of insignificant independent variables.
 To showcase the differences between a model using Ridge regression, Lasso regression, and multiple linear regression, sklearn-linear-lasso-ridge portrays each of these models when trained on the same training data. Using the sklearn library, each model:
 - Uses a train-test split of 70%-30%
