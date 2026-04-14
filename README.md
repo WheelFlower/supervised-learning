@@ -32,6 +32,8 @@ To showcase the differences between a model using Ridge regression, Lasso regres
 - Displays the accuracy score of both test and training data to demonstrate the possibility of overfitting (conforming too closely to the training data)
 ## Classification Models
 In machine learning, classification models operate by learning class characteristics from training data and then using those learned characteristics to assign possible classes to new data. 
+### K-Nearest-Neighbors
+K-Nearest-Neighbors preforms classification based on the proximity of a data point compared to the rest of the dataset. The "k" value is how many points or "neighbors" the algorithm should look for when making the decision. The optimal k-value varies from dataset to dataset, and can be calculated manually before being plugged into the model.
 
 The k-nearest-neighbors.py file uses the sklearn KNeighborsClassifier model. As well as the requirements for all models in this repository, this model:
 - Uses a train-test split of 70%-30%
