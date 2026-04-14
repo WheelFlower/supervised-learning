@@ -20,3 +20,10 @@ X = df.drop(columns=['species'])
 y = df.species
 
 X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2)
+
+# see inital accuracy
+dectree = tree.DecisionTreeClassifier()
+dectree.fit(X_train,y_train)
+y_predicts = dectree.predict(X_test)
+accuracy = accuracy_score(y_test,y_predicts)
+print('Accuracy:', accuracy)
