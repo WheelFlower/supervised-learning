@@ -26,7 +26,7 @@ mlr-basic.py displays a multiple linear regression model achiveved through stats
 There are two popular techniques for regularizing linear regression models: Ridge regression and Lasso regression. Both methods operate by applying a penalty term to restrain the model's coefficients, but they go about it in different ways. Ridge regression adds a penalty based on the squared magnitude of the coefficients while lasso regression adds a penalty based on the absolute values of the coefficients. Ridge regression tends to perform better for the purpose of addressing multicollinearity (when two independent variables are highly correlated) while Lasso regression better addresses the elimination of insignificant independent variables.
 
 To showcase the differences between a model using Ridge regression, Lasso regression, and multiple linear regression, sklearn-linear-lasso-ridge.py portrays each of these models when trained on the same training data. Using the sklearn library, each model:
-- Uses a train-test split of 70%-30%
+- Uses a train-test split of 80%-20%
 - Uses feature data is scaled using sklearn's StandardScaler
 - Displays the coeffients of the features used
 - Displays the accuracy score of both test and training data to demonstrate the possibility of overfitting (conforming too closely to the training data)
@@ -36,11 +36,12 @@ In machine learning, classification models operate by learning class characteris
 K-Nearest-Neighbors preforms classification based on the proximity of a data point compared to the rest of the dataset. The "k" value is how many points or "neighbors" the algorithm should look for when making the decision. The optimal k-value varies from dataset to dataset, and can be calculated manually before being plugged into the model.
 
 The k-nearest-neighbors.py file uses the sklearn KNeighborsClassifier model. As well as the requirements for all models in this repository, this model:
-- Uses a train-test split of 70%-30%
+- Uses a train-test split of 80%-20%
 - Feature data is standardized using sklearn's StandardScaler
 - Computes the accuracy scores for the various k-values the model could use and plots them to show which is highest
 ### Decision tree
 Decision trees predict a target variable by learning simple rules about the feature variables. For example, when determining what type of animal something could be, it would check it it has wings, then if it has fur, than how long the snout is, etc., until the model narrows down what it could be. 
 
 The decision-tree.py file uses the sklearn DecisionTreeClassifier model. As weel as teh requirements for all models in this repository, this model:
+- Uses a train-test split of 80%-20%
 - Creates a png file to visualize the decision tree
