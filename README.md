@@ -39,3 +39,8 @@ The k-nearest-neighbors.py file uses the sklearn KNeighborsClassifier model. As 
 - Uses a train-test split of 70%-30%
 - Feature data is standardized using sklearn's StandardScaler
 - Computes the accuracy scores for the various k-values the model could use and plots them to show which is highest
+### Decision tree
+Decision trees predict a target variable by learning simple rules about the feature variables. For example, when determining what type of animal something could be, it would check it it has wings, then if it has fur, than how long the snout is, etc., until the model narrows down what it could be. 
+
+The decision-tree.py file uses the sklearn DecisionTreeClassifier model. As weel as teh requirements for all models in this repository, this model:
+- Creates a png file to visualize the decision tree
