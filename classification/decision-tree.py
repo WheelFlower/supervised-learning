@@ -27,3 +27,12 @@ dectree.fit(X_train,y_train)
 y_predicts = dectree.predict(X_test)
 accuracy = accuracy_score(y_test,y_predicts)
 print('Accuracy:', accuracy)
+
+# show confusion matrix
+print('Confusion matrix:')
+print(confusion_matrix(y_test,y_predicts))
+
+fig = plt.figure(figsize=(79,90))
+tree.plot_tree(dectree, feature_names=X.columns.tolist(), fontsize=10)
+plt.show()
+fig.savefig('decisiontree1.png')
