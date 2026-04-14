@@ -33,7 +33,7 @@ To showcase the differences between a model using Ridge regression, Lasso regres
 ## Classification Models
 In machine learning, classification models operate by learning class characteristics from training data and then using those learned characteristics to assign possible classes to new data. 
 
-The k-means.py file uses the sklearn KNeighborsClassifier model. As well as the requirements for all models in this repository, this model:
+The k-nearest-neighbors.py file uses the sklearn KNeighborsClassifier model. As well as the requirements for all models in this repository, this model:
 - Uses a train-test split of 70%-30%
 - Feature data is standardized using sklearn's StandardScaler
 - Computes the accuracy scores for the various k-values the model could use and plots them to show which is highest
